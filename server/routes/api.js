@@ -8,9 +8,17 @@ var knex = require('../db/knex')
 router.get('/', function(req, res, next) {
     knex('pirates')
         .then(pirates => {
-            console.log('all the pirates are', pirates);
+            // console.log('all the pirates are', pirates);
             res.json(pirates)
         })
 });
+
+router.post('/', function(req, res, next) {
+    knex('pirates')
+        .insert(req.body)
+        .then((newPirate) => {
+            res.json(newPirate)
+        })
+})
 
 module.exports = router;
