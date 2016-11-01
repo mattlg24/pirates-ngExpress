@@ -1,6 +1,6 @@
 const app = angular.module('pirates', ['ngRoute'])
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: '/views/pirates.html',
@@ -8,9 +8,8 @@ app.config(function($routeProvider) {
         })
 })
 
-app.controller('PiratesController', function($scope) {
-
-    $scope.greeting = 'hello im working'
 
 
-})
+// app.controller('PiratesController', function($scope) {
+//     $scope.greeting = 'hello im working'
+// })

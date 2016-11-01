@@ -1,0 +1,23 @@
+<h1>Pirates</h1>
+
+<create-pirate ng-show="view.showPirateForm"></create-pirate>
+
+<button type="button" name="button" class="btn btn-default" ng-click="clickMe()">Add a Pirate</button>
+
+<!-- begin show all pirates -->
+<div ng-repeat="pirate in view.pirates">
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object pirateImg" ng-src="{{pirate.image_url}}" alt="{{pirate.name}}">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{pirate.name}}</h4>
+            <p>Poison: {{pirate.poison}}</p>
+            <p>Accessory: {{pirate.accessory}}</p>
+        </div>
+    </div>
+    <br>
+</div>
+<!-- end show all pirates -->
